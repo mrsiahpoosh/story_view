@@ -163,6 +163,7 @@ class StoryItem {
   factory StoryItem.assetImage({
     required String assetPath,
     required StoryController controller,
+    Color? backgroundColor,
     Key? key,
     BoxFit imageFit = BoxFit.fitWidth,
     Text? caption,
@@ -176,7 +177,7 @@ class StoryItem {
     return StoryItem(
       Container(
         key: key,
-        color: Colors.black,
+        color: backgroundColor,
         child: Stack(
           children: <Widget>[
             // StoryImage.url(
